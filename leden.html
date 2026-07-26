@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledenomgeving  — KP-Artevelde</title>
+<meta name="description" content="Afgeschermde ledenomgeving van Koperen Passer Club O-3 Artevelde: ledenlijst, clubdocumenten en profiel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+<!-- header (ingelogd) -->
+<header class="site-header">
+  <div class="container header-row header-row--leden">
+  <a class="brand" href="index.html">
+    <img src="img/logo-artevelde.png" alt="Koperen Passer" class="brand-logo">
+    <span class="brand-text">
+      <span class="brand-name">KP-Artevelde</span>
+      <span class="brand-motto">Ledenomgeving</span>
+    </span>
+  </a>
+  <div class="leden-actions">
+    <a href="index.html" class="leden-link">Naar de website</a>
+    <a href="#profiel" class="leden-link leden-link--strong">Mijn profiel</a>
+    <a href="index.html" class="btn btn-outline btn-leden" data-auth-action="logout">Uitloggen</a>
+  </div>
+  </div>
+</header>
+
+<!-- welkom + zoeken -->
+<section class="leden-welcome">
+  <div class="container leden-welcome-row">
+    <div class="leden-welcome-text">
+      <h1>Welkom terug, Jean-Pierre</h1>
+      <p>Hier vind je de ledenlijst en de clubdocumenten. Vragen? De contactgegevens van het bestuur staan in de ledenlijst.</p>
+    </div>
+    <div class="leden-search">
+      <label class="field">Zoeken in de ledenomgeving
+        <input type="search" id="ledenZoek" placeholder="Zoek een lid of document…" class="search-input search-input--full">
+      </label>
+    </div>
+  </div>
+</section>
+
+<!-- sectienavigatie -->
+<nav class="leden-tabs" aria-label="Secties">
+  <div class="container leden-tabs-row">
+    <a href="#ledenlijst">Ledenlijst</a>
+    <a href="#documenten">Clubdocumenten</a>
+    <a href="#profiel">Mijn profiel</a>
+  </div>
+</nav>
+
+<!-- ledenlijst -->
+<section class="section section--leden" id="ledenlijst">
+  <div class="leden-head">
+    <h2>Ledenlijst</h2>
+    <div class="leden-chips" id="sortChips">
+      <button class="chip chip--plain active" data-sort="alfabetisch">Alfabetisch</button>
+      <button class="chip chip--plain" data-sort="functie">Per bestuursfunctie</button>
+      <button class="chip chip--plain" data-sort="gemeente">Per gemeente</button>
+    </div>
+  </div>
+  <div class="row-list" id="ledenLijst"></div>
+  <p class="leden-leeg hidden" id="ledenLeeg">Geen leden gevonden voor deze zoekopdracht.</p>
+  <p class="leden-note">De ledenlijst is alleen zichtbaar voor ingelogde leden. Gebruik deze gegevens enkel voor clubdoeleinden.</p>
+</section>
+
+<!-- clubdocumenten -->
+<section class="section section--leden" id="documenten">
+  <h2 class="leden-h2">Clubdocumenten</h2>
+  <div class="row-list" id="ledenDocs"></div>
+  <p class="leden-leeg hidden" id="docsLeeg">Geen documenten gevonden voor deze zoekopdracht.</p>
+</section>
+
+<!-- mijn profiel -->
+<section class="section section--leden section--leden-last" id="profiel">
+  <h2 class="leden-h2">Mijn profiel</h2>
+  <div class="profile-card">
+    <div class="profile-grid">
+      <div><span class="aside-label">Naam</span><span class="aside-value">Jean-Pierre De Cnijf</span></div>
+      <div><span class="aside-label">Lid sinds</span><span class="aside-value">2019 · lidnummer 0103-042</span></div>
+      <div><span class="aside-label">E-mailadres</span><span class="aside-value">jean-pierre@artevelde.koperenpasser.be</span></div>
+      <div><span class="aside-label">Telefoon</span><span class="aside-value">+32 470 00 00 00</span></div>
+      <div><span class="aside-label">Adres</span><span class="aside-value">Hoogpoort 12, 9000 Gent</span></div>
+      <div><span class="aside-label">Gemeente</span><span class="aside-value">Gent</span></div>
+    </div>
+    <div class="profile-foot">
+      <a href="word-lid.html" class="btn btn-outline">Wijziging doorgeven</a>
+      <span class="form-note">Aanpassingen verlopen via de secretaris.</span>
+    </div>
+  </div>
+</section>
+
+<!-- footer (kort) -->
+<footer class="site-footer site-footer--slim">
+  <div class="footer-bottom">
+    <span>© 2026 Koperen Passer Club O-3 Artevelde · Ledenomgeving</span>
+    <div class="footer-legal">
+      <a href="http://www.koperenpasser.be/disclaimer">Disclaimer en privacy</a>
+      <a href="#">Toegankelijkheid</a>
+      <a href="index.html" data-auth-action="logout">Uitloggen</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

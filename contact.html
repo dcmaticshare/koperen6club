@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact  — KP-Artevelde</title>
+<meta name="description" content="Neem contact op met Koperen Passer Club O-3 Artevelde via het contactformulier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+<!-- topbalk -->
+<div class="topbar">
+  <div class="container topbar-row">
+    <a href="word-lid.html" class="topbar-strong" data-auth="out">Lid worden</a>
+    <a href="leden.html" class="topbar-strong" data-auth="out" data-auth-action="login">Inloggen</a>
+    <a href="leden.html" class="topbar-strong" data-auth="in">Mijn gegevens</a>
+    <a href="index.html" class="topbar-strong" data-auth="in" data-auth-action="logout">Uitloggen</a>
+  </div>
+</div>
+
+<!-- header -->
+<header class="site-header site-header--sticky">
+  <div class="container header-row">
+  <a class="brand" href="index.html">
+    <img src="img/logo-artevelde.png" alt="Koperen Passer" class="brand-logo">
+    <span class="brand-text">
+      <span class="brand-name">KP-Artevelde</span>
+      <span class="brand-motto">Club O-3 · Koperen Passer · Gent</span>
+    </span>
+  </a>
+  <nav class="main-nav" id="mainNav" aria-label="Hoofdnavigatie">
+    <div class="nav-head">
+      <span class="nav-head-brand"><img src="img/logo-artevelde.png" alt="">KP-Artevelde</span>
+      <button class="nav-close" id="navClose" aria-label="Sluit menu">×</button>
+    </div>
+    <a href="index.html">Home</a>
+    <div class="nav-item">
+      <button type="button" class="nav-parent">Onze club <span class="caret" aria-hidden="true">▾</span></button>
+      <div class="sub-menu">
+        <a href="over-ons.html">Clubvoorstelling</a>
+        <a href="bestuur.html">Bestuur</a>
+        <a href="nieuws.html">Nieuws</a>
+      </div>
+    </div>
+    <a href="activiteiten.html">Kalender</a>
+    <a href="archief.html">Archief</a>
+    <a href="word-lid.html" class="mobile-only" data-auth="out">Lid worden</a>
+    <a href="leden.html" class="mobile-only" data-auth="out" data-auth-action="login">Inloggen</a>
+    <a href="leden.html" class="mobile-only" data-auth="in">Mijn gegevens</a>
+    <a href="index.html" class="mobile-only" data-auth="in" data-auth-action="logout">Uitloggen</a>
+    <a href="contact.html" class="nav-cta-mobile">Contact</a>
+    <div class="nav-foot">Plus Oultra</div>
+  </nav>
+  <div class="header-actions">
+    <a href="contact.html" class="btn btn-outline btn-leden">Contact</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- paginakop -->
+<section class="page-head">
+  <div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <span class="current">Contact</span>
+  </div>
+  <h1>Contact</h1>
+  <p class="lede">Een vraag over een activiteit, het lidmaatschap of iets anders? Stuur ons een bericht — we antwoorden doorgaans binnen enkele dagen.</p>
+  </div>
+</section>
+
+<!-- formulier + gegevens -->
+<section class="section">
+  <div class="detail-grid">
+
+    <div class="detail-main">
+      <div id="contactFormWrap">
+        <form class="form-card" id="contactForm">
+          <div class="form-row">
+            <label class="field">Voornaam
+              <input type="text" required placeholder="Mia">
+            </label>
+            <label class="field">Naam
+              <input type="text" required placeholder="Peeters">
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="field">E-mailadres
+              <input type="email" required placeholder="jouw@email.be">
+            </label>
+            <label class="field">Telefoon <span class="optional">(optioneel)</span>
+              <input type="tel" placeholder="+32 470 00 00 00">
+            </label>
+          </div>
+          <label class="field">Onderwerp
+            <select>
+              <option>Vraag over een activiteit</option>
+              <option>Vraag over lidmaatschap</option>
+              <option>Iets anders</option>
+            </select>
+          </label>
+          <label class="field">Bericht
+            <textarea rows="5" required placeholder="Schrijf hier je vraag of bericht…"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Verstuur bericht</button>
+            <span class="form-note">We gebruiken je gegevens enkel om je vraag te beantwoorden.</span>
+          </div>
+        </form>
+      </div>
+      <div id="contactSuccess" class="success-card hidden">
+        <div class="success-icon">✓</div>
+        <h2>Dank je wel — verzonden!</h2>
+        <p>We hebben je bericht goed ontvangen en antwoorden zo snel mogelijk per e-mail.</p>
+        <a href="index.html" class="btn btn-outline">Terug naar de homepagina</a>
+      </div>
+    </div>
+
+    <aside class="detail-aside">
+      <div class="aside-rows">
+        <div><span class="aside-label">E-mail</span><span class="aside-value">artevelde@koperenpasser.be</span></div>
+        <div><span class="aside-label">Telefoon</span><span class="aside-value">+32 9 000 00 00</span></div>
+        <div><span class="aside-label">Post</span><span class="aside-value">Koperen Passer Club O-3 Artevelde<br>p/a Vrijdagmarkt 1, 9000 Gent</span></div>
+        <div><span class="aside-label">Liever meteen lid worden?</span><span class="aside-value"><a href="word-lid.html">Bekijk de lidmaatschapspagina →</a></span></div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><span>Koperen Passer Club O-3 Artevelde</span></div>
+      <p>p/a Vrijdagmarkt 1, 9000 Gent<br>artevelde@koperenpasser.be<br>+32 9 000 00 00</p>
+    </div>
+    <div class="footer-emblem">
+      <img src="img/logo-artevelde.png" alt="Wapenschild van Koperen Passer" loading="lazy" class="footer-logo">
+    </div>
+    <div class="footer-links">
+      <div>
+        <span class="footer-head">Ontdekken</span>
+        <a href="activiteiten.html">Kalender</a>
+        <a href="nieuws.html">Nieuws</a>
+        <a href="archief.html">Archief</a>
+        <a href="over-ons.html">Onze club</a>
+      </div>
+      <div>
+        <span class="footer-head">Koperen Passer</span>
+        <a href="http://www.koperenpasser.be">KP hoofdsite</a>
+        <a href="http://www.koperenpasser.be/ont">KP afdeling Oost-Vlaanderen</a>
+        <a href="http://www.zilveren-passer.be">Zilveren Passer</a>
+        <a href="word-lid.html">Lid worden</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Koperen Passer Club O-3 Artevelde</span>
+    <a href="http://www.koperenpasser.be">Centrale website Koperen Passer vzw</a>
+    <div class="footer-legal">
+      <a href="http://www.koperenpasser.be/disclaimer">Disclaimer en privacy</a>
+      <a href="contact.html">Webmaster: Alain Raulo</a>
+      <a href="#">Toegankelijkheid</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
