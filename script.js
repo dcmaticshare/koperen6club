@@ -245,6 +245,8 @@
   }
 
   function renderDocs() {
+    var wrap = document.getElementById('ledenDocs');
+    if (!wrap) return;
     var items = documenten.filter(function (d) { return past(d.titel); });
     document.getElementById('ledenDocs').innerHTML = items.map(function (d) {
       return '<a href="#" class="doc-item"><span class="doc-type">PDF</span><span class="doc-name">' + esc(d.titel) + '</span><span class="doc-date">' + esc(d.datum) + '</span></a>';
@@ -262,7 +264,8 @@
     kalMode = chip.getAttribute('data-kal');
     renderKalender();
   });
-  document.getElementById('sortChips').addEventListener('click', function (e) {
+  var sortChips = document.getElementById('sortChips');
+  if (sortChips) sortChips.addEventListener('click', function (e) {
     var chip = e.target.closest('.chip'); if (!chip) return;
     this.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('active'); });
     chip.classList.add('active');
@@ -334,4 +337,132 @@
     document.getElementById('contactFormWrap').classList.add('hidden');
     document.getElementById('contactSuccess').classList.remove('hidden');
   });
+})();
+
+
+// ---------- fotogalerij met lichtbak ----------
+(function () {
+  var box = document.getElementById('lightbox');
+  if (!box) return;
+  var items = Array.prototype.slice.call(document.querySelectorAll('.gal-item'));
+  var img = document.getElementById('lbImg');
+  var cap = document.getElementById('lbCaption');
+  var i = 0;
+
+  function toon(n) {
+    i = (n + items.length) % items.length;
+    var bron = items[i].querySelector('img');
+    img.src = bron.currentSrc || bron.src;
+    img.alt = bron.alt || '';
+    cap.textContent = bron.alt || '';
+    box.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function sluit() { box.hidden = true; document.body.style.overflow = ''; }
+
+  items.forEach(function (el, n) {
+    el.addEventListener('click', function (e) {
+      if (e.target.closest('.foto-browse')) return;
+      toon(n);
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', sluit);
+  document.getElementById('lbPrev').addEventListener('click', function () { toon(i - 1); });
+  document.getElementById('lbNext').addEventListener('click', function () { toon(i + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) sluit(); });
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') sluit();
+    if (e.key === 'ArrowLeft') toon(i - 1);
+    if (e.key === 'ArrowRight') toon(i + 1);
+  });
+})();
+
+
+// ---------- meer komende activiteiten ----------
+(function () {
+  var btn = document.getElementById('komendToggle');
+  var extra = document.getElementById('komendExtra');
+  if (!btn || !extra) return;
+  btn.addEventListener('click', function () {
+    var open = extra.hasAttribute('hidden');
+    if (open) { extra.removeAttribute('hidden'); } else { extra.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Minder komende activiteiten' : 'Meer komende activiteiten';
+  });
+})();
+
+// ---------- paginering voorbije activiteiten ----------
+(function () {
+  var nav = document.getElementById('paginering');
+  if (!nav) return;
+  var groepen = Array.prototype.slice.call(document.querySelectorAll('[data-pagina]'));
+  var nummers = Array.prototype.slice.call(nav.querySelectorAll('[data-page-to]'));
+  var vorige = nav.querySelector('[data-page-prev]');
+  var volgende = nav.querySelector('[data-page-next]');
+  var huidig = 1;
+  function toon(n) {
+    huidig = Math.min(Math.max(n, 1), groepen.length);
+    groepen.forEach(function (g) {
+      if (parseInt(g.getAttribute('data-pagina'), 10) === huidig) g.removeAttribute('hidden');
+      else g.setAttribute('hidden', '');
+    });
+    nummers.forEach(function (b) {
+      b.classList.toggle('active', parseInt(b.getAttribute('data-page-to'), 10) === huidig);
+    });
+    vorige.disabled = huidig === 1;
+    volgende.disabled = huidig === groepen.length;
+    var sectie = document.getElementById('voorbij');
+    if (sectie) window.scrollTo({ top: sectie.offsetTop - 70, behavior: 'smooth' });
+  }
+  nummers.forEach(function (b) {
+    b.addEventListener('click', function () { toon(parseInt(b.getAttribute('data-page-to'), 10)); });
+  });
+  vorige.addEventListener('click', function () { toon(huidig - 1); });
+  volgende.addEventListener('click', function () { toon(huidig + 1); });
+})();
+
+// ---------- formulieren met bevestiging ----------
+(function () {
+  var forms = document.querySelectorAll('form[data-success]');
+  Array.prototype.forEach.call(forms, function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var succes = document.getElementById(form.getAttribute('data-success'));
+      var wrap = form.parentElement;
+      if (wrap) wrap.classList.add('hidden');
+      if (succes) succes.classList.remove('hidden');
+    });
+  });
+})();
+
+
+// ---------- mijn profiel: wachtwoord + voorkeuren ----------
+(function () {
+  var pw = document.getElementById('pwForm');
+  if (pw) {
+    pw.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var velden = pw.querySelectorAll('input[type=password]');
+      if (velden[1].value !== velden[2].value) {
+        velden[2].setCustomValidity('De twee nieuwe wachtwoorden zijn niet gelijk.');
+        velden[2].reportValidity();
+        return;
+      }
+      document.getElementById('pwFormWrap').classList.add('hidden');
+      document.getElementById('pwSuccess').classList.remove('hidden');
+    });
+    pw.addEventListener('input', function (e) {
+      if (e.target.type === 'password') e.target.setCustomValidity('');
+    });
+  }
+  var vk = document.getElementById('voorkeurenForm');
+  if (vk) {
+    vk.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var note = document.getElementById('voorkeurenNote');
+      note.textContent = 'Je voorkeuren zijn bewaard.';
+      note.style.color = 'var(--primary)';
+    });
+  }
 })();

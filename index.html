@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -40,15 +40,22 @@
     </div>
     <a href="index.html" class="active">Home</a>
     <div class="nav-item">
-      <button type="button" class="nav-parent">Onze club <span class="caret" aria-hidden="true">▾</span></button>
+      <button type="button" class="nav-parent">Over ons <span class="caret" aria-hidden="true">▾</span></button>
       <div class="sub-menu">
         <a href="over-ons.html">Clubvoorstelling</a>
         <a href="bestuur.html">Bestuur</a>
         <a href="nieuws.html">Nieuws</a>
       </div>
     </div>
-    <a href="activiteiten.html">Kalender</a>
-    <a href="archief.html">Archief</a>
+    <div class="nav-item" data-auth="in">
+      <button type="button" class="nav-parent">Clubinfo <span class="caret" aria-hidden="true">▾</span></button>
+      <div class="sub-menu">
+        <a href="clubdocumenten.html">Clubdocumenten</a>
+        <a href="jaarverslagen.html">Financiële jaarverslagen</a>
+        <a href="ledenlijsten.html">Ledenlijsten</a>
+      </div>
+    </div>
+    <a href="activiteiten.html">Activiteiten</a>
     <a href="word-lid.html" class="mobile-only" data-auth="out">Lid worden</a>
     <a href="leden.html" class="mobile-only" data-auth="out" data-auth-action="login">Inloggen</a>
     <a href="leden.html" class="mobile-only" data-auth="in">Mijn gegevens</a>
@@ -80,81 +87,58 @@
   </div>
 </section>
 
-<!-- uit onze kalender -->
+<!-- komende activiteiten -->
 <section class="section" id="agenda">
   <div class="section-head">
-    <h2>Uit onze kalender</h2>
-    <a href="activiteiten.html" class="link-primary">Volledige kalender →</a>
+    <h2>Komende activiteiten</h2>
+    <a href="activiteiten.html#komend" class="link-primary">Alle activiteiten →</a>
   </div>
   <p style="margin: -12px 0 26px; max-width: 68ch; color: var(--ink-soft); font-size: 16px;">Tien uitstappen per werkingsjaar, doorgaans op de tweede donderdag van de maand: een voormiddag- en een namiddagactiviteit, met een lunch ertussen en een afscheidsdrink na.</p>
   <div class="card-grid">
     <article class="card">
       <div class="card-media">
-        <img src="img/act-1.webp" alt="Fort van Breendonk" loading="lazy">
-        <span class="badge">do 13 jun 2024</span>
+        <img src="img/act-2.webp" alt="Museum voor Schone Kunsten in Gent" loading="lazy">
+        <span class="badge">do 12 sep 2024</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Breendonk &amp; Puurs</span><span class="tag tag-groen">Uitstap</span></div>
-        <h3>Fort van Breendonk en brouwerij Duvel</h3>
-        <p>Een indringende voormiddag in het fort, een hartelijke namiddag in de brouwerij.</p>
-        <div class="card-foot"><a href="activiteiten.html" class="btn btn-outline btn-card">Bekijk de kalender</a></div>
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-blauw">Museum</span></div>
+        <h3>Museum voor Schone Kunsten en het Citadelpark</h3>
+        <p>De vaste collectie van het MSK in de voormiddag, een wandeling door het Citadelpark na de lunch.</p>
+        <div class="card-foot">
+          <a href="activiteit-msk-gent.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
     <article class="card">
       <div class="card-media">
-        <img src="img/hero-mannen.jpg" alt="Clubleden tijdens de lustrumviering" loading="lazy">
-        <span class="badge">do 30 mei 2024</span>
+        <img src="img/act-6.webp" alt="Stadhuis van Oudenaarde" loading="lazy">
+        <span class="badge">do 10 okt 2024</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-oker">Clubmoment</span></div>
-        <h3>Lustrumviering: 25 jaar KP-Artevelde O3</h3>
-        <p>Een kwarteeuw club, gevierd met de leden van het eerste uur.</p>
-        <div class="card-foot"><a href="activiteiten.html" class="btn btn-outline btn-card">Bekijk de kalender</a></div>
+        <div class="card-meta"><span class="card-place">Oudenaarde</span><span class="tag tag-groen">Uitstap</span></div>
+        <h3>Stadhuis en wandtapijten, brouwerij Liefmans</h3>
+        <p>Oudenaarde met zijn stadhuis en beroemde wandtapijten, brouwerij Liefmans in de namiddag.</p>
+        <div class="card-foot">
+          <a href="activiteit-oudenaarde.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
     <article class="card">
       <div class="card-media">
-        <img src="img/nieuws-2.webp" alt="Wijngaard in de Westhoek" loading="lazy">
-        <span class="badge">do 18 apr 2024</span>
+        <img src="img/act-5.webp" alt="Kranen in de Gentse haven" loading="lazy">
+        <span class="badge">do 14 nov 2024</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Ieper &amp; Dranouter</span><span class="tag tag-groen">Uitstap</span></div>
-        <h3>Ieper en wijngoed Monteberg</h3>
-        <p>De stad en haar geschiedenis in de voormiddag, de heuvels van Dranouter met een wijnproeverij nadien.</p>
-        <div class="card-foot"><a href="activiteiten.html" class="btn btn-outline btn-card">Bekijk de kalender</a></div>
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-groen">Uitstap</span></div>
+        <h3>Havenrondvaart en het Sifferdok</h3>
+        <p>Met de boot door de Gentse haven: dokken, kranen en zeeschepen, met uitleg over de kanaalzone.</p>
+        <div class="card-foot">
+          <a href="activiteit-haven-gent.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
-    </article>
-  </div>
-</section>
-
-<!-- archief (enkel voor ingelogde leden) -->
-<section class="section section--tight-top" id="archief" data-auth="in">
-  <div class="section-head">
-    <h2>Archief</h2>
-    <a href="archief.html" class="link-primary">Volledig archief →</a>
-  </div>
-  <p style="margin: -12px 0 26px; max-width: 68ch; color: var(--ink-soft); font-size: 16px;">Onze uitstappen in beeld en woord — zichtbaar omdat je bent ingelogd.</p>
-  <div class="news-grid">
-    <article class="news-item">
-      <img src="img/hero-mannen.jpg" alt="Clubleden samen op stap" loading="lazy" data-upload="hero">
-      <span class="news-date">30 mei 2024</span>
-      <h3><a href="terugblik-lustrum.html">Vijfentwintig jaar Koperen Passer Artevelde O3</a></h3>
-      <p>Ons vijfentwintigste werkingsjaar vierden we met een lustrumviering in Gent, samen met de leden van het eerste uur.</p>
-      <a href="terugblik-lustrum.html" class="link-primary">Lees meer →</a>
-    </article>
-    <article class="news-item">
-      <img src="img/wandeling-mannen.jpg" alt="Wandelende clubleden" loading="lazy" data-upload="wandeling">
-      <span class="news-date">14 maart 2024</span>
-      <h3><a href="nieuws.html">Bank Delen en een wandeling langs de Coupure</a></h3>
-      <p>Ontvangst bij Bank Delen, een gegidste wandeling langs de Coupure en uitleg over onze nieuwe clubwebsite.</p>
-      <a href="nieuws.html" class="link-primary">Lees meer →</a>
-    </article>
-    <article class="news-item">
-      <img src="img/stam-mannen.jpg" alt="Clubleden in het museum" loading="lazy" data-upload="stam">
-      <span class="news-date">14 december 2023</span>
-      <h3><a href="nieuws.html">Chocolademuseum en Concertgebouw in Brugge</a></h3>
-      <p>Van cacaoboon tot praline, en daarna achter de schermen in het Concertgebouw.</p>
-      <a href="nieuws.html" class="link-primary">Lees meer →</a>
     </article>
   </div>
 </section>
@@ -170,17 +154,40 @@
       <a href="over-ons.html" class="btn btn-primary">Ontdek onze club</a>
     </div>
     <div class="about-media">
-      <img src="img/logo-artevelde.png" alt="Wapenschild van Koperen Passer" class="about-photo about-photo--sm" loading="lazy">
+      <img src="https://www.koperenpasser.be/ont3/files/2018/07/2-logo-animatie-2.gif" alt="Logo van Koperen Passer" class="about-photo about-photo--sm" loading="lazy" onerror="this.onerror=null;this.src='img/logo-artevelde.png';">
     </div>
   </div>
 </section>
 
-<!-- lid worden -->
-<section class="join join--center" id="word-lid">
-  <div class="container join-center-inner">
-    <h2>Heb je zin om lid te worden?</h2>
-    <p>Wil je deelnemen aan onze activiteiten? Vul het aanvraagformulier in. Je aanvraag gaat naar het secretariaat van Koperen Passer vzw; zij nemen zo spoedig mogelijk contact met je op.</p>
-    <a href="word-lid.html" class="btn btn-light">Ik wil lid worden</a>
+<!-- nieuws -->
+<section class="section section--tight-top" id="nieuws">
+  <div class="section-head">
+    <h2>Nieuws</h2>
+    <a href="nieuws.html" class="link-primary">Al het nieuws →</a>
+  </div>
+  <p style="margin: -12px 0 26px; max-width: 68ch; color: var(--ink-soft); font-size: 16px;">Mededelingen uit de club: berichten van het bestuur, praktische informatie en clubnieuws.</p>
+  <div class="news-grid">
+    <article class="news-item">
+      <a href="activiteiten.html"><img src="img/act-2.webp" alt="" loading="lazy"></a>
+      <div class="news-meta"><span class="tag tag-blauw">Bestuur</span><span class="news-date">2 juli 2026</span></div>
+      <h3><a href="activiteiten.html">Kalender 2026 – 2027 is goedgekeurd</a></h3>
+      <p>Tien uitstappen, opnieuw met een clublunch in februari. De data staan vanaf nu in de activiteiten.</p>
+      <a href="activiteiten.html" class="link-primary">Bekijk de kalender →</a>
+    </article>
+    <article class="news-item">
+      <a href="contact.html"><img src="img/act-4.webp" alt="" loading="lazy"></a>
+      <div class="news-meta"><span class="tag tag-oker">Mededeling</span><span class="news-date">18 juni 2026</span></div>
+      <h3><a href="contact.html">Lidgeld werkingsjaar 2026 – 2027</a></h3>
+      <p>Het lidgeld blijft € 60 per werkingsjaar. De uitnodiging tot betaling volgt in september.</p>
+      <a href="contact.html" class="link-primary">Vraag hierover stellen →</a>
+    </article>
+    <article class="news-item">
+      <a href="bestuur.html"><img src="img/act-3.webp" alt="" loading="lazy"></a>
+      <div class="news-meta"><span class="tag tag-blauw">Bestuur</span><span class="news-date">4 juni 2026</span></div>
+      <h3><a href="bestuur.html">Nieuwe secretaris vanaf september</a></h3>
+      <p>Na zes jaar geeft onze secretaris de fakkel door; de opvolging wordt in september voorgesteld.</p>
+      <a href="bestuur.html" class="link-primary">Naar het bestuur →</a>
+    </article>
   </div>
 </section>
 
@@ -197,10 +204,9 @@
     <div class="footer-links">
       <div>
         <span class="footer-head">Ontdekken</span>
-        <a href="activiteiten.html">Kalender</a>
+        <a href="activiteiten.html">Activiteiten</a>
         <a href="nieuws.html">Nieuws</a>
-        <a href="archief.html">Archief</a>
-        <a href="over-ons.html">Onze club</a>
+        <a href="over-ons.html">Over ons</a>
       </div>
       <div>
         <span class="footer-head">Koperen Passer</span>

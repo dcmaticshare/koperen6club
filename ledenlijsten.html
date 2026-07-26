@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nieuws — KP-Artevelde</title>
-<meta name="description" content="Berichten uit het landelijk secretariaat en de zeventig groepen van Koperen Passer, van mijlpalen tot achter de schermen.">
+<title>Ledenlijsten — KP-Artevelde</title>
+<meta name="description" content="Ledenlijst van Koperen Passer club O-3 Artevelde, enkel voor ingelogde leden.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
@@ -76,77 +76,35 @@
 <!-- paginakop -->
 <section class="page-head">
   <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">/</span>
-      <a href="over-ons.html">Over ons</a>
-      <span aria-hidden="true">/</span>
-      <span class="current">Nieuws</span>
-    </div>
-    <h1>Nieuws</h1>
-    <p class="lede">Mededelingen uit de club: berichten van het bestuur, praktische informatie en clubnieuws. Voor de uitstappen zelf ga je naar de activiteiten.</p>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <span class="current">Clubinfo</span>
+    <span aria-hidden="true">/</span>
+    <span class="current">Ledenlijsten</span>
+  </div>
+  <span class="kicker">Clubinfo</span>
+  <h1>Ledenlijsten</h1>
+  <p class="lede">Wie zit er in de club, en wie neemt welke taak op? Zoek op naam, functie of gemeente.</p>
   </div>
 </section>
 
-<!-- uitgelicht -->
-<section class="section section--tight-top" style="padding-bottom: 8px;">
-  <article class="featured">
-    <img src="img/hero-mannen.jpg" alt="Clubleden samen op stap">
-    <div class="featured-body">
-      <div class="news-meta"><span class="tag">Clubmoment</span><span class="news-date">30 mei 2024</span></div>
-      <h2><a href="terugblik-lustrum.html">Vijfentwintig jaar Koperen Passer Artevelde O3</a></h2>
-      <p>Het werkingsjaar 2023 – 2024 was ons vijfentwintigste. Dat vierden we op 30 mei met een lustrumviering in Gent, samen met de leden van het eerste uur.</p>
-      <a href="terugblik-lustrum.html" class="link-primary">Lees de terugblik →</a>
+<!-- ledenlijst -->
+<section class="section">
+  <p class="leden-note" style="margin-top: 0;">Deze pagina is bedoeld voor ingelogde leden. Gebruik de gegevens enkel voor clubdoeleinden.</p>
+  <div class="leden-head" style="margin-top: 22px;">
+    <label class="leden-search" style="flex: 1 1 300px; max-width: 420px;">
+      <input type="search" id="ledenZoek" class="search-input--full" placeholder="Zoek een lid…" aria-label="Zoek een lid">
+    </label>
+    <div class="leden-chips" id="sortChips">
+      <button class="chip chip--plain active" data-sort="alfabetisch">Alfabetisch</button>
+      <button class="chip chip--plain" data-sort="functie">Per bestuursfunctie</button>
+      <button class="chip chip--plain" data-sort="gemeente">Per gemeente</button>
     </div>
-  </article>
-</section>
-
-<!-- berichten -->
-<section class="section section--tight-top">
-  <div class="news-grid news-grid--loose">
-    <article class="news-item">
-      <a href="activiteiten.html"><img src="img/act-2.webp" alt="" loading="lazy"></a>
-      <div class="news-meta"><span class="tag tag-blauw">Bestuur</span><span class="news-date">2 juli 2026</span></div>
-      <h3><a href="activiteiten.html">Kalender 2026 – 2027 is goedgekeurd</a></h3>
-      <p>Het bestuur legde het programma voor het nieuwe werkingsjaar vast: tien uitstappen, opnieuw met een clublunch in februari. De data staan vanaf nu in de activiteiten.</p>
-      <a href="activiteiten.html" class="link-primary">Bekijk de kalender →</a>
-    </article>
-    <article class="news-item">
-      <a href="contact.html"><img src="img/act-4.webp" alt="" loading="lazy"></a>
-      <div class="news-meta"><span class="tag tag-oker">Mededeling</span><span class="news-date">18 juni 2026</span></div>
-      <h3><a href="contact.html">Lidgeld werkingsjaar 2026 – 2027</a></h3>
-      <p>Het lidgeld blijft ongewijzigd op € 60 per werkingsjaar. Je ontvangt de uitnodiging tot betaling in september van de penningmeester.</p>
-      <a href="contact.html" class="link-primary">Vraag hierover stellen →</a>
-    </article>
-    <article class="news-item">
-      <a href="bestuur.html"><img src="img/act-3.webp" alt="" loading="lazy"></a>
-      <div class="news-meta"><span class="tag tag-blauw">Bestuur</span><span class="news-date">4 juni 2026</span></div>
-      <h3><a href="bestuur.html">Nieuwe secretaris vanaf september</a></h3>
-      <p>Na zes jaar geeft onze secretaris de fakkel door. Het bestuur stelt de opvolging voor op de eerste clubavond van het nieuwe werkingsjaar.</p>
-      <a href="bestuur.html" class="link-primary">Naar het bestuur →</a>
-    </article>
-    <article class="news-item">
-      <a href="word-lid.html"><img src="img/act-6.webp" alt="" loading="lazy"></a>
-      <div class="news-meta"><span class="tag tag-groen">Club</span><span class="news-date">21 mei 2026</span></div>
-      <h3><a href="word-lid.html">Vier nieuwe leden verwelkomd</a></h3>
-      <p>Onze club groeide dit voorjaar met vier leden. Wie iemand wil voorstellen: een introducé is altijd welkom op een uitstap.</p>
-      <a href="word-lid.html" class="link-primary">Lid worden →</a>
-    </article>
-    <article class="news-item">
-      <a href="clubdocumenten.html"><img src="img/act-1.webp" alt="" loading="lazy"></a>
-      <div class="news-meta"><span class="tag tag-oker">Mededeling</span><span class="news-date">30 april 2026</span></div>
-      <h3><a href="clubdocumenten.html">Financieel jaarverslag beschikbaar</a></h3>
-      <p>Het jaarverslag van de penningmeester is goedgekeurd en staat samen met de vorige jaargangen bij de clubinfo voor leden.</p>
-      <a href="clubdocumenten.html" class="link-primary">Naar de clubdocumenten →</a>
-    </article>
-    <article class="news-item">
-      <a href="contact.html"><img src="img/nieuws-2.webp" alt="" loading="lazy"></a>
-      <div class="news-meta"><span class="tag tag-blauw">Bestuur</span><span class="news-date">12 maart 2026</span></div>
-      <h3><a href="contact.html">Clubwebsite in een nieuw kleedje</a></h3>
-      <p>Onze website werd volledig vernieuwd: overzichtelijker op de telefoon, met een ledengedeelte voor documenten en het archief.</p>
-      <a href="contact.html" class="link-primary">Iets gezien dat niet klopt? →</a>
-    </article>
   </div>
+  <div class="row-list" id="ledenLijst"></div>
+  <p class="leden-leeg hidden" id="ledenLeeg">Geen leden gevonden voor deze zoekopdracht.</p>
+  <p class="leden-note">Verhuisd of nieuw e-mailadres? Geef het door aan de <a href="contact.html">secretaris</a>.</p>
 </section>
 
 <!-- footer -->

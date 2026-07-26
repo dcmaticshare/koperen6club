@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact  — KP-Artevelde</title>
-<meta name="description" content="Neem contact op met Koperen Passer Club O-3 Artevelde via het contactformulier.">
+<title>Stadsmuseum ’t Gasthuys en winterwandeling — KP-Artevelde</title>
+<meta name="description" content="Het stadsmuseum van Aalst in de voormiddag, een winterwandeling door het centrum in de namiddag.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
@@ -73,75 +73,105 @@
 </header>
 <div class="nav-overlay" id="navOverlay"></div>
 
-<!-- paginakop -->
-<section class="page-head">
-  <div class="container">
+<!-- breadcrumb -->
+<div class="section section--crumb">
   <div class="breadcrumb">
     <a href="index.html">Home</a>
     <span aria-hidden="true">/</span>
-    <span class="current">Contact</span>
+    <a href="activiteiten.html">Activiteiten</a>
+    <span aria-hidden="true">/</span>
+    <span class="current">Stadsmuseum ’t Gasthuys en winterwandeling</span>
   </div>
-  <h1>Contact</h1>
-  <p class="lede">Een vraag over een activiteit, het lidmaatschap of iets anders? Stuur ons een bericht — we antwoorden doorgaans binnen enkele dagen.</p>
+</div>
+
+<!-- titel + beeld -->
+<section class="section section--title">
+  <div class="meta-row">
+    <span class="tag tag-blauw">Museum</span>
+    <span class="card-place">Donderdag 12 december 2024 · Aalst</span>
+  </div>
+  <h1 class="detail-title">Stadsmuseum ’t Gasthuys en winterwandeling</h1>
+  <div class="hero-figure">
+    <img src="img/act-1.webp" alt="Stadsmuseum in Aalst">
+    <span class="badge">do 12 dec 2024</span>
   </div>
 </section>
 
-<!-- formulier + gegevens -->
-<section class="section">
+<!-- verloop + praktisch -->
+<section class="section section--tight-top">
   <div class="detail-grid">
-
-    <div class="detail-main">
-      <div id="contactFormWrap">
-        <form class="form-card" id="contactForm">
-          <div class="form-row">
-            <label class="field">Voornaam
-              <input type="text" required placeholder="Mia">
-            </label>
-            <label class="field">Naam
-              <input type="text" required placeholder="Peeters">
-            </label>
-          </div>
-          <div class="form-row">
-            <label class="field">E-mailadres
-              <input type="email" required placeholder="jouw@email.be">
-            </label>
-            <label class="field">Telefoon <span class="optional">(optioneel)</span>
-              <input type="tel" placeholder="+32 470 00 00 00">
-            </label>
-          </div>
-          <label class="field">Onderwerp
-            <select>
-              <option>Vraag over een activiteit</option>
-              <option>Vraag over lidmaatschap</option>
-              <option>Iets anders</option>
-            </select>
-          </label>
-          <label class="field">Bericht
-            <textarea rows="5" required placeholder="Schrijf hier je vraag of bericht…"></textarea>
-          </label>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Verstuur bericht</button>
-            <span class="form-note">We gebruiken je gegevens enkel om je vraag te beantwoorden.</span>
-          </div>
-        </form>
+    <article class="detail-main prose">
+      <p class="lead">Het stadsmuseum van Aalst in de voormiddag, een winterwandeling door het centrum in de namiddag.</p>
+      <h2>Verloop van de dag</h2>
+      <p>Stadsmuseum ’t Gasthuys is gehuisvest in een middeleeuws hospitaal. De collectie loopt van de eerste stadsrechten tot Dirk Martens, de drukker die Aalst op de kaart zette.</p>
+      <p>Daarna wandelen we door het winterse centrum: het belfort, de Grote Markt en de verhalen die bij deze tijd van het jaar horen. Voor de terugreis is er een warme drink.</p>
+      <h2 id="inschrijven">Inschrijven</h2>
+      <p>Leden schrijven in via onderstaand formulier, tot een week voor de activiteit. Wie een introducé meebrengt, geeft dat mee bij het aantal deelnemers.</p>
+  <div id="formWrap">
+    <form class="form-card" data-success="formSucces">
+      <div class="form-row">
+        <label class="field">Voornaam
+          <input type="text" required placeholder="Jean-Pierre">
+        </label>
+        <label class="field">Naam
+          <input type="text" required placeholder="De Cnijf">
+        </label>
       </div>
-      <div id="contactSuccess" class="success-card hidden">
-        <div class="success-icon">✓</div>
-        <h2>Dank je wel — verzonden!</h2>
-        <p>We hebben je bericht goed ontvangen en antwoorden zo snel mogelijk per e-mail.</p>
-        <a href="index.html" class="btn btn-outline">Terug naar de homepagina</a>
+      <div class="form-row">
+        <label class="field">E-mailadres
+          <input type="email" required placeholder="jouw@email.be">
+        </label>
+        <label class="field">Telefoon <span class="optional">(optioneel)</span>
+          <input type="tel" placeholder="+32 470 00 00 00">
+        </label>
       </div>
-    </div>
+      <div class="form-row">
+        <label class="field">Aantal deelnemers
+          <select>
+            <option>1 persoon</option>
+            <option>2 personen (met partner of genodigde)</option>
+          </select>
+        </label>
+        <label class="field">Vervoer
+          <select>
+            <option>Ik kom met eigen wagen</option>
+            <option>Ik rijd graag mee</option>
+            <option>Ik kan plaats aanbieden</option>
+          </select>
+        </label>
+      </div>
+      <label class="field">Opmerkingen <span class="optional">(optioneel)</span>
+        <textarea rows="4" placeholder="Dieetwensen, latere aankomst, vragen…"></textarea>
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Schrijf me in</button>
+        <span class="form-note">Je inschrijving gaat naar het bestuur; je ontvangt een bevestiging per e-mail.</span>
+      </div>
+    </form>
+  </div>
+  <div id="formSucces" class="success-card hidden">
+    <div class="success-icon">✓</div>
+    <h2>Je inschrijving is genoteerd</h2>
+    <p>Het bestuur bezorgt je kort voor de activiteit de praktische details en de afrekening.</p>
+    <a href="activiteiten.html" class="btn btn-outline">Terug naar de activiteiten</a>
+  </div>
 
-    <aside class="detail-aside">
+      <a href="activiteiten.html" class="btn btn-outline detail-back">← Terug naar de activiteiten</a>
+    </article>
+
+    <aside class="detail-aside detail-aside--sticky detail-aside--tint" aria-label="Praktische informatie">
+      <h2 class="aside-title">Praktisch</h2>
       <div class="aside-rows">
-        <div><span class="aside-label">E-mail</span><span class="aside-value">artevelde@koperenpasser.be</span></div>
-        <div><span class="aside-label">Telefoon</span><span class="aside-value">+32 9 000 00 00</span></div>
-        <div><span class="aside-label">Post</span><span class="aside-value">Koperen Passer Club O-3 Artevelde<br>p/a Vrijdagmarkt 1, 9000 Gent</span></div>
-        <div><span class="aside-label">Liever meteen lid worden?</span><span class="aside-value"><a href="word-lid.html">Bekijk de lidmaatschapspagina →</a></span></div>
+        <div><span class="aside-label">Datum</span><span class="aside-value">Donderdag 12 december 2024</span></div>
+        <div><span class="aside-label">Voormiddag</span><span class="aside-value">Stadsmuseum ’t Gasthuys</span></div>
+        <div><span class="aside-label">Middag</span><span class="aside-value">Gezamenlijke lunch</span></div>
+        <div><span class="aside-label">Namiddag</span><span class="aside-value">Gegidste winterwandeling</span></div>
+        <div><span class="aside-label">Plaats</span><span class="aside-value">Aalst<br>Oude Vismarkt en Grote Markt</span></div>
+        <div><span class="aside-label">Werkingsjaar</span><span class="aside-value">2024 – 2025<br><span class="aside-note">vierde uitstap van tien</span></span></div>
+        <div><span class="aside-label">Deelname</span><span class="aside-value">Enkel voor leden en hun genodigden; de deelnamekosten worden per uitstap afgerekend.</span></div>
+        <div><span class="aside-label">Meer weten?</span><span class="aside-value"><a href="contact.html">Neem contact op met het bestuur</a></span></div>
       </div>
     </aside>
-
   </div>
 </section>
 

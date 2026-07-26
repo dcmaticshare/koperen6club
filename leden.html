@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ledenomgeving  — KP-Artevelde</title>
-<meta name="description" content="Afgeschermde ledenomgeving van Koperen Passer Club O-3 Artevelde: ledenlijst, clubdocumenten en profiel.">
+<title>Mijn gegevens — KP-Artevelde</title>
+<meta name="description" content="Mijn gegevens: profielpagina van de ledenomgeving van Koperen Passer club O-3 Artevelde.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -36,62 +36,107 @@
   <div class="container leden-welcome-row">
     <div class="leden-welcome-text">
       <h1>Welkom terug, Jean-Pierre</h1>
-      <p>Hier vind je de ledenlijst en de clubdocumenten. Vragen? De contactgegevens van het bestuur staan in de ledenlijst.</p>
+      <p>Hier beheer je je gegevens, je lidmaatschap en je wachtwoord. De ledenlijst, de clubdocumenten en de jaarverslagen vind je in het menu onder <strong>Clubinfo</strong>.</p>
     </div>
-    <div class="leden-search">
-      <label class="field">Zoeken in de ledenomgeving
-        <input type="search" id="ledenZoek" placeholder="Zoek een lid of document…" class="search-input search-input--full">
-      </label>
-    </div>
+    
   </div>
 </section>
 
 <!-- sectienavigatie -->
-<nav class="leden-tabs" aria-label="Secties">
-  <div class="container leden-tabs-row">
-    <a href="#ledenlijst">Ledenlijst</a>
-    <a href="#documenten">Clubdocumenten</a>
-    <a href="#profiel">Mijn profiel</a>
-  </div>
-</nav>
-
-<!-- ledenlijst -->
-<section class="section section--leden" id="ledenlijst">
-  <div class="leden-head">
-    <h2>Ledenlijst</h2>
-    <div class="leden-chips" id="sortChips">
-      <button class="chip chip--plain active" data-sort="alfabetisch">Alfabetisch</button>
-      <button class="chip chip--plain" data-sort="functie">Per bestuursfunctie</button>
-      <button class="chip chip--plain" data-sort="gemeente">Per gemeente</button>
-    </div>
-  </div>
-  <div class="row-list" id="ledenLijst"></div>
-  <p class="leden-leeg hidden" id="ledenLeeg">Geen leden gevonden voor deze zoekopdracht.</p>
-  <p class="leden-note">De ledenlijst is alleen zichtbaar voor ingelogde leden. Gebruik deze gegevens enkel voor clubdoeleinden.</p>
-</section>
-
-<!-- clubdocumenten -->
-<section class="section section--leden" id="documenten">
-  <h2 class="leden-h2">Clubdocumenten</h2>
-  <div class="row-list" id="ledenDocs"></div>
-  <p class="leden-leeg hidden" id="docsLeeg">Geen documenten gevonden voor deze zoekopdracht.</p>
-</section>
 
 <!-- mijn profiel -->
-<section class="section section--leden section--leden-last" id="profiel">
-  <h2 class="leden-h2">Mijn profiel</h2>
+<section class="section section--leden" id="profiel">
+  <h2 class="leden-h2">Mijn gegevens</h2>
   <div class="profile-card">
+    <h3 class="profile-sub">Persoonlijke gegevens</h3>
     <div class="profile-grid">
       <div><span class="aside-label">Naam</span><span class="aside-value">Jean-Pierre De Cnijf</span></div>
-      <div><span class="aside-label">Lid sinds</span><span class="aside-value">2019 · lidnummer 0103-042</span></div>
+      <div><span class="aside-label">Geboortedatum</span><span class="aside-value">14 maart 1958</span></div>
       <div><span class="aside-label">E-mailadres</span><span class="aside-value">jean-pierre@artevelde.koperenpasser.be</span></div>
       <div><span class="aside-label">Telefoon</span><span class="aside-value">+32 470 00 00 00</span></div>
       <div><span class="aside-label">Adres</span><span class="aside-value">Hoogpoort 12, 9000 Gent</span></div>
-      <div><span class="aside-label">Gemeente</span><span class="aside-value">Gent</span></div>
+      <div><span class="aside-label">Partner</span><span class="aside-value">Marleen Vermeersch</span></div>
     </div>
     <div class="profile-foot">
-      <a href="word-lid.html" class="btn btn-outline">Wijziging doorgeven</a>
+      <a href="contact.html" class="btn btn-outline">Wijziging doorgeven</a>
       <span class="form-note">Aanpassingen verlopen via de secretaris.</span>
+    </div>
+  </div>
+</section>
+
+<!-- lidmaatschap -->
+<section class="section section--leden section--tight-top" id="lidmaatschap">
+  <h2 class="leden-h2">Mijn lidmaatschap</h2>
+  <div class="profile-card">
+    <div class="profile-grid">
+      <div><span class="aside-label">Lidnummer</span><span class="aside-value">0103-042</span></div>
+      <div><span class="aside-label">Lid sinds</span><span class="aside-value">september 2019 · zevende werkingsjaar</span></div>
+      <div><span class="aside-label">Club</span><span class="aside-value">O-3 Artevelde · Gent</span></div>
+      <div><span class="aside-label">Functie</span><span class="aside-value">Lid</span></div>
+      <div><span class="aside-label">Lidgeld 2026 – 2027</span><span class="aside-value">€ 60 · <span class="tag tag-groen">betaald op 8 september 2026</span></span></div>
+      <div><span class="aside-label">Voorgedragen door</span><span class="aside-value">Luc Van Damme</span></div>
+    </div>
+    <h3 class="profile-sub profile-sub--spaced">Mijn deelnames dit werkingsjaar</h3>
+    <ul class="profile-list">
+      <li><span>Museum voor Schone Kunsten, Gent</span><span class="tag tag-groen">Ingeschreven</span></li>
+      <li><span>Oudenaarde en de Vlaamse Ardennen</span><span class="tag tag-groen">Ingeschreven</span></li>
+      <li><span>Haven van Gent per boot</span><span class="tag tag-oker">Nog niet ingeschreven</span></li>
+      <li><span>Nieuwjaarslunch met partners</span><span class="tag tag-groen">Ingeschreven · 2 personen</span></li>
+    </ul>
+    <div class="profile-foot">
+      <a href="activiteiten.html" class="btn btn-outline">Naar de activiteiten</a>
+      <span class="form-note">Inschrijven kan tot een week voor elke activiteit.</span>
+    </div>
+  </div>
+</section>
+
+<!-- voorkeuren -->
+<section class="section section--leden section--tight-top" id="voorkeuren">
+  <h2 class="leden-h2">Mijn voorkeuren</h2>
+  <div class="profile-card">
+    <form class="profile-form" id="voorkeurenForm">
+      <label class="check"><input type="checkbox" checked> Uitnodigingen voor activiteiten per e-mail ontvangen</label>
+      <label class="check"><input type="checkbox" checked> Herinnering enkele dagen voor een activiteit</label>
+      <label class="check"><input type="checkbox"> Mijn telefoonnummer tonen in de ledenlijst</label>
+      <label class="check"><input type="checkbox" checked> Mijn foto mag verschijnen in het archief</label>
+      <div class="profile-foot">
+        <button type="submit" class="btn btn-primary">Voorkeuren bewaren</button>
+        <span class="form-note" id="voorkeurenNote">Wijzigingen worden meteen bewaard.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- wachtwoord -->
+<section class="section section--leden section--leden-last section--tight-top" id="wachtwoord">
+  <h2 class="leden-h2">Wachtwoord wijzigen</h2>
+  <div class="profile-card">
+    <div id="pwFormWrap">
+      <form class="profile-form" id="pwForm">
+        <label class="field">Huidig wachtwoord
+          <input type="password" required autocomplete="current-password" placeholder="••••••••">
+        </label>
+        <div class="form-row">
+          <label class="field">Nieuw wachtwoord
+            <input type="password" required minlength="8" autocomplete="new-password" placeholder="Minstens 8 tekens">
+          </label>
+          <label class="field">Nieuw wachtwoord herhalen
+            <input type="password" required minlength="8" autocomplete="new-password" placeholder="Opnieuw invullen">
+          </label>
+        </div>
+        <p class="form-note">Kies een wachtwoord van minstens acht tekens, met een cijfer of leesteken. Je blijft na het wijzigen ingelogd.</p>
+        <div class="profile-foot">
+          <button type="submit" class="btn btn-primary">Wachtwoord wijzigen</button>
+          <span class="form-note">Vragen over je toegang? Neem contact op met de secretaris.</span>
+        </div>
+      </form>
+    </div>
+    <div id="pwSuccess" class="inline-success hidden">
+      <span class="inline-success-icon">✓</span>
+      <div>
+        <strong>Je wachtwoord is gewijzigd.</strong>
+        <p>Gebruik vanaf nu je nieuwe wachtwoord om in te loggen.</p>
+      </div>
     </div>
   </div>
 </section>

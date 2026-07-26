@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Activiteiten — Koperen Passer vzw</title>
-<meta name="description" content="De agenda van Koperen Passer: lezingen, uitstappen, concerten, expo’s en wandelingen van zeventig lokale groepen in Vlaanderen.">
+<title>Activiteiten — KP-Artevelde</title>
+<meta name="description" content="Komende en voorbije activiteiten van KP-Artevelde: tien uitstappen per werkingsjaar, met verslag en foto’s.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -40,15 +40,22 @@
     </div>
     <a href="index.html">Home</a>
     <div class="nav-item">
-      <button type="button" class="nav-parent">Onze club <span class="caret" aria-hidden="true">▾</span></button>
+      <button type="button" class="nav-parent">Over ons <span class="caret" aria-hidden="true">▾</span></button>
       <div class="sub-menu">
         <a href="over-ons.html">Clubvoorstelling</a>
         <a href="bestuur.html">Bestuur</a>
         <a href="nieuws.html">Nieuws</a>
       </div>
     </div>
-    <a href="activiteiten.html">Kalender</a>
-    <a href="archief.html">Archief</a>
+    <div class="nav-item" data-auth="in">
+      <button type="button" class="nav-parent">Clubinfo <span class="caret" aria-hidden="true">▾</span></button>
+      <div class="sub-menu">
+        <a href="clubdocumenten.html">Clubdocumenten</a>
+        <a href="jaarverslagen.html">Financiële jaarverslagen</a>
+        <a href="ledenlijsten.html">Ledenlijsten</a>
+      </div>
+    </div>
+    <a href="activiteiten.html">Activiteiten</a>
     <a href="word-lid.html" class="mobile-only" data-auth="out">Lid worden</a>
     <a href="leden.html" class="mobile-only" data-auth="out" data-auth-action="login">Inloggen</a>
     <a href="leden.html" class="mobile-only" data-auth="in">Mijn gegevens</a>
@@ -69,164 +76,289 @@
 <!-- paginakop -->
 <section class="page-head">
   <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">/</span>
-      <span class="current">Kalender</span>
-    </div>
-    <h1>Kalender werkingsjaar 2023 – 2024</h1>
-    <p class="lede">Wij organiseren tien uitstappen per werkingsjaar (september – juni), doorgaans op de tweede donderdag van de maand. Een voormiddag- en een namiddagactiviteit, onderbroken door een lunch — en voor de terugreis praten we nog even na tijdens een afscheidsdrink.</p>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">/</span>
+    <span class="current">Activiteiten</span>
+  </div>
+  <h1>Activiteiten</h1>
+  <p class="lede">Wij organiseren tien uitstappen per werkingsjaar (september – juni), doorgaans op de tweede donderdag van de maand: een voormiddag- en een namiddagactiviteit, met een lunch ertussen en een afscheidsdrink na. Hieronder wat komt, en daaronder waar we samen zijn geweest.</p>
   </div>
 </section>
 
-<!-- agenda -->
-<section class="section section--tight-top">
-  <div class="filters filter-bar" id="filters">
-    <button class="chip active" data-cat="alles">Alles</button>
-    <button class="chip chip-blauw" data-cat="museum">Musea</button>
-    <button class="chip chip-groen" data-cat="uitstap">Uitstappen</button>
-    <button class="chip chip-mos" data-cat="wandeling">Wandelingen</button>
-    <button class="chip chip-oker" data-cat="club">Clubmomenten</button>
-    <span class="filter-count" id="filterCount">10 activiteiten</span>
+<!-- komende activiteiten -->
+<section class="section" id="komend">
+  <div class="month-head" style="margin-bottom: 22px;">
+    <h2>Komende activiteiten</h2>
+    <div class="rule"></div>
   </div>
-
-  <div class="month-block" data-month-block>
-    <div class="month-head">
-      <h2>Najaar 2023</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="card-grid">
-    <article class="card" data-cat="museum">
+  <p style="margin: -8px 0 26px; max-width: 68ch; color: var(--ink-soft); font-size: 16px;">Werkingsjaar 2024 – 2025, eerste semester. Leden schrijven in via de detailpagina van de activiteit.</p>
+  <div class="card-grid">
+    <article class="card" data-cat="komend">
       <div class="card-media">
-        <img src="img/act-1.webp" alt="Museum 1302 in Kortrijk" loading="lazy">
-        <span class="badge">do 14 sep 2023</span>
+        <img src="img/act-2.webp" alt="Museum voor Schone Kunsten in Gent" loading="lazy">
+        <span class="badge">do 12 sep 2024</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Kortrijk</span><span class="tag tag-blauw">Museum</span></div>
-        <h3>Museum 1302, de Broeltorens en het Textielmuseum</h3>
-        <p>Van de Guldensporenslag naar de Leiestad van het vlas — drie bezoeken op één dag.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-blauw">Museum</span></div>
+        <h3>Museum voor Schone Kunsten en het Citadelpark</h3>
+        <p>We openen het werkingsjaar dicht bij huis: de vaste collectie van het MSK in de voormiddag, een wandeling door het Citadelpark na de lunch.</p>
+        <div class="card-foot">
+          <a href="activiteit-msk-gent.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
-    <article class="card" data-cat="uitstap">
+    <article class="card" data-cat="komend">
       <div class="card-media">
-        <img src="img/act-3.webp" alt="Art Center Horus in Sint-Martens-Latem" loading="lazy">
-        <span class="badge">do 12 okt 2023</span>
+        <img src="img/act-6.webp" alt="Stadhuis van Oudenaarde" loading="lazy">
+        <span class="badge">do 10 okt 2024</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Sint-Martens-Latem &amp; Deinze</span><span class="tag tag-groen">Uitstap</span></div>
-        <h3>Art Center Horus en het Eetbos</h3>
-        <p>In de voormiddag kunst in Latem, in de namiddag tafelen in het Eetbos van Deinze.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
+        <div class="card-meta"><span class="card-place">Oudenaarde</span><span class="tag tag-groen">Uitstap</span></div>
+        <h3>Stadhuis en wandtapijten, brouwerij Liefmans</h3>
+        <p>Oudenaarde in de voormiddag met zijn stadhuis en beroemde wandtapijten, brouwerij Liefmans in de namiddag.</p>
+        <div class="card-foot">
+          <a href="activiteit-oudenaarde.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
-    <article class="card" data-cat="uitstap">
+    <article class="card" data-cat="komend">
       <div class="card-media">
-        <img src="img/act-5.webp" alt="Historische tractoren" loading="lazy">
-        <span class="badge">do 09 nov 2023</span>
+        <img src="img/act-5.webp" alt="Kranen in de Gentse haven" loading="lazy">
+        <span class="badge">do 14 nov 2024</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Zulte</span><span class="tag tag-groen">Uitstap</span></div>
-        <h3>Tractorverzameling en Altan</h3>
-        <p>Een indrukwekkende private verzameling landbouwmachines, gevolgd door een bezoek aan Altan.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-groen">Uitstap</span></div>
+        <h3>Havenrondvaart en het Sifferdok</h3>
+        <p>Met de boot door de Gentse haven: dokken, kranen en zeeschepen, met uitleg over de toekomst van de kanaalzone.</p>
+        <div class="card-foot">
+          <a href="activiteit-haven-gent.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
-    <article class="card" data-cat="museum">
-      <div class="card-media">
-        <img src="img/act-6.webp" alt="Concertgebouw Brugge" loading="lazy">
-        <span class="badge">do 14 dec 2023</span>
-      </div>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-place">Brugge</span><span class="tag tag-blauw">Museum</span></div>
-        <h3>Chocolademuseum en Concertgebouw</h3>
-        <p>Van cacaoboon tot praline, en daarna achter de schermen in het Concertgebouw.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
-      </div>
-    </article>
-    </div>
   </div>
-
-  <div class="month-block" data-month-block>
-    <div class="month-head">
-      <h2>Voorjaar 2024</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="card-grid">
-    <article class="card" data-cat="wandeling">
+  <div class="card-grid" id="komendExtra" hidden>
+    <article class="card" data-cat="komend">
       <div class="card-media">
-        <img src="img/act-2.webp" alt="Art-decogevel in Gent" loading="lazy">
-        <span class="badge">do 11 jan 2024</span>
+        <img src="img/act-1.webp" alt="Stadsmuseum in Aalst" loading="lazy">
+        <span class="badge">do 12 dec 2024</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-mos">Wandeling</span></div>
-        <h3>Art deco en interbellum: Vooruit en Boekentoren</h3>
-        <p>Een stadsparcours langs het interbellum, met bezoek aan de Vooruit en de Boekentoren.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
+        <div class="card-meta"><span class="card-place">Aalst</span><span class="tag tag-blauw">Museum</span></div>
+        <h3>Stadsmuseum ’t Gasthuys en winterwandeling</h3>
+        <p>Het stadsmuseum van Aalst in de voormiddag, een winterwandeling door het centrum in de namiddag.</p>
+        <div class="card-foot">
+          <a href="activiteit-aalst.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
-    <article class="card" data-cat="club">
+    <article class="card" data-cat="komend">
       <div class="card-media">
         <img src="img/act-4.webp" alt="Gedekte tafel voor de clublunch" loading="lazy">
-        <span class="badge">do 08 feb 2024</span>
+        <span class="badge">do 09 jan 2025</span>
       </div>
       <div class="card-body">
         <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-oker">Clubmoment</span></div>
-        <h3>Clublunch met partners</h3>
-        <p>Eén keer per jaar schuiven ook de partners mee aan tafel.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
+        <h3>Nieuwjaarslunch met partners</h3>
+        <p>Ons jaarlijkse clubmoment waarop ook de partners mee aan tafel schuiven.</p>
+        <div class="card-foot">
+          <a href="activiteit-nieuwjaarslunch.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
-    <article class="card" data-cat="wandeling">
+    <article class="card" data-cat="komend">
       <div class="card-media">
-        <img src="img/act-3.webp" alt="De Coupure in Gent" loading="lazy">
-        <span class="badge">do 14 mrt 2024</span>
+        <img src="img/act-3.webp" alt="De Dender in Dendermonde" loading="lazy">
+        <span class="badge">do 13 feb 2025</span>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-mos">Wandeling</span></div>
-        <h3>Bank Delen en wandeling langs de Coupure</h3>
-        <p>Ontvangst bij Bank Delen, een gegidste wandeling langs de Coupure en uitleg over onze nieuwe website.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
+        <div class="card-meta"><span class="card-place">Dendermonde</span><span class="tag tag-mos">Wandeling</span></div>
+        <h3>Vleeshuismuseum en wandeling langs de Dender</h3>
+        <p>Het Ros Beiaard en de stadsgeschiedenis in het Vleeshuismuseum, daarna een wandeling langs de Dender.</p>
+        <div class="card-foot">
+          <a href="activiteit-dendermonde.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
-    <article class="card" data-cat="uitstap">
+  </div>
+  <div class="more-row">
+    <button type="button" class="btn btn-outline" id="komendToggle" aria-expanded="false" aria-controls="komendExtra">Meer komende activiteiten</button>
+  </div>
+</section>
+
+<!-- voorbije activiteiten -->
+<section class="section section--tight-top" id="voorbij">
+  <div class="month-head" style="margin-bottom: 22px;">
+    <h2>Voorbije activiteiten</h2>
+    <div class="rule"></div>
+  </div>
+  <p style="margin: -8px 0 26px; max-width: 68ch; color: var(--ink-soft); font-size: 16px;">Werkingsjaar 2023 – 2024, van Kortrijk tot Breendonk. Elke dag heeft zijn verslag en zijn foto’s.</p>
+  <div class="card-grid" data-pagina="1">
+    <article class="card" data-cat="voorbij">
       <div class="card-media">
-        <img src="img/nieuws-2.webp" alt="Wijngaard in de Westhoek" loading="lazy">
-        <span class="badge">do 18 apr 2024</span>
-      </div>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-place">Ieper &amp; Dranouter</span><span class="tag tag-groen">Uitstap</span></div>
-        <h3>Ieper en wijngoed Monteberg</h3>
-        <p>De stad en haar geschiedenis in de voormiddag, de heuvels van Dranouter met een wijnproeverij nadien.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
-      </div>
-    </article>
-    <article class="card" data-cat="club">
-      <div class="card-media">
-        <img src="img/hero-mannen.jpg" alt="Clubleden tijdens de lustrumviering" loading="lazy">
-        <span class="badge">do 30 mei 2024</span>
-      </div>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-oker">Clubmoment</span></div>
-        <h3>Lustrumviering: 25 jaar Koperen Passer Artevelde O3</h3>
-        <p>Een kwarteeuw club, gevierd met de leden van het eerste uur.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
-      </div>
-    </article>
-    <article class="card" data-cat="uitstap">
-      <div class="card-media">
-        <img src="img/act-1.webp" alt="Fort van Breendonk" loading="lazy">
-        <span class="badge">do 13 jun 2024</span>
+        <img src="img/stam-mannen.jpg" alt="Clubleden tijdens het bezoek" loading="lazy" data-upload="stam">
+        <span class="badge">13 juni 2024</span>
       </div>
       <div class="card-body">
         <div class="card-meta"><span class="card-place">Breendonk &amp; Puurs</span><span class="tag tag-groen">Uitstap</span></div>
         <h3>Fort van Breendonk en brouwerij Duvel</h3>
         <p>Een indringende voormiddag in het fort, een hartelijke namiddag in de brouwerij.</p>
-        <div class="card-foot"><span class="card-group">Werkingsjaar <strong>2023 – 2024</strong></span></div>
+        <div class="card-foot">
+          <a href="activiteit-breendonk.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
       </div>
     </article>
-    </div>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/hero-mannen.jpg" alt="Clubleden tijdens de lustrumviering" loading="lazy" data-upload="hero">
+        <span class="badge">30 mei 2024</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-oker">Clubmoment</span></div>
+        <h3>Lustrumviering: 25 jaar KP-Artevelde O3</h3>
+        <p>Een kwarteeuw club, gevierd met de leden van het eerste uur.</p>
+        <div class="card-foot">
+          <a href="activiteit-lustrum.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/nieuws-2.webp" alt="Wijngaard in de Westhoek" loading="lazy">
+        <span class="badge">18 april 2024</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Ieper &amp; Dranouter</span><span class="tag tag-groen">Uitstap</span></div>
+        <h3>Ieper en wijngoed Monteberg</h3>
+        <p>De stad en haar geschiedenis in de voormiddag, de heuvels van Dranouter nadien.</p>
+        <div class="card-foot">
+          <a href="activiteit-ieper.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/wandeling-mannen.jpg" alt="Wandelende clubleden" loading="lazy" data-upload="wandeling">
+        <span class="badge">14 maart 2024</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-mos">Wandeling</span></div>
+        <h3>Bank Delen en de Coupure</h3>
+        <p>Ontvangst bij Bank Delen en een gegidste wandeling langs de Coupure.</p>
+        <div class="card-foot">
+          <a href="activiteit-delen.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/act-4.webp" alt="Gedekte tafel voor de clublunch" loading="lazy">
+        <span class="badge">8 februari 2024</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-oker">Clubmoment</span></div>
+        <h3>Clublunch met partners</h3>
+        <p>Eén keer per jaar schuiven ook de partners mee aan tafel.</p>
+        <div class="card-foot">
+          <a href="activiteit-clublunch.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/act-2.webp" alt="Art-decogevel in Gent" loading="lazy">
+        <span class="badge">11 januari 2024</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Gent</span><span class="tag tag-mos">Wandeling</span></div>
+        <h3>Art deco en interbellum: Vooruit en Boekentoren</h3>
+        <p>Een stadsparcours langs het interbellum, met de Vooruit en de Boekentoren.</p>
+        <div class="card-foot">
+          <a href="activiteit-gent-artdeco.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
   </div>
+  <div class="card-grid" data-pagina="2" hidden>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/act-6.webp" alt="Concertgebouw Brugge" loading="lazy">
+        <span class="badge">14 december 2023</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Brugge</span><span class="tag tag-blauw">Museum</span></div>
+        <h3>Chocolademuseum en Concertgebouw</h3>
+        <p>Van cacaoboon tot praline, en daarna achter de schermen in het Concertgebouw.</p>
+        <div class="card-foot">
+          <a href="activiteit-brugge.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/act-5.webp" alt="Historische tractoren" loading="lazy">
+        <span class="badge">9 november 2023</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Zulte</span><span class="tag tag-groen">Uitstap</span></div>
+        <h3>Tractorverzameling en Altan</h3>
+        <p>Een indrukwekkende private verzameling landbouwmachines, gevolgd door Altan.</p>
+        <div class="card-foot">
+          <a href="activiteit-zulte.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/act-3.webp" alt="Art Center Horus" loading="lazy">
+        <span class="badge">12 oktober 2023</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Sint-Martens-Latem &amp; Deinze</span><span class="tag tag-groen">Uitstap</span></div>
+        <h3>Art Center Horus en het Eetbos</h3>
+        <p>Kunst in Latem in de voormiddag, tafelen in het Eetbos van Deinze nadien.</p>
+        <div class="card-foot">
+          <a href="activiteit-latem.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-cat="voorbij">
+      <div class="card-media">
+        <img src="img/act-1.webp" alt="Museum 1302 in Kortrijk" loading="lazy">
+        <span class="badge">14 september 2023</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-place">Kortrijk</span><span class="tag tag-blauw">Museum</span></div>
+        <h3>Museum 1302, Broeltorens en Textielmuseum</h3>
+        <p>Van de Guldensporenslag naar de Leiestad van het vlas — drie bezoeken op één dag.</p>
+        <div class="card-foot">
+          <a href="activiteit-kortrijk.html" class="btn btn-outline btn-card" data-auth="in">Lees meer</a>
+          <span class="card-group" data-auth="out">Details voor leden</span>
+        </div>
+      </div>
+    </article>
+  </div>
+  <nav class="pagination" id="paginering" aria-label="Paginering voorbije activiteiten">
+    <button type="button" class="page-btn" data-page-prev disabled>← Vorige</button>
+    <button type="button" class="page-btn active" data-page-to="1">1</button>
+    <button type="button" class="page-btn" data-page-to="2">2</button>
+    <button type="button" class="page-btn" data-page-next>Volgende →</button>
+  </nav>
 </section>
 
 <!-- nieuwsbrief -->
@@ -256,10 +388,9 @@
     <div class="footer-links">
       <div>
         <span class="footer-head">Ontdekken</span>
-        <a href="activiteiten.html">Kalender</a>
+        <a href="activiteiten.html">Activiteiten</a>
         <a href="nieuws.html">Nieuws</a>
-        <a href="archief.html">Archief</a>
-        <a href="over-ons.html">Onze club</a>
+        <a href="over-ons.html">Over ons</a>
       </div>
       <div>
         <span class="footer-head">Koperen Passer</span>

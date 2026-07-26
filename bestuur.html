@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -40,15 +40,22 @@
     </div>
     <a href="index.html">Home</a>
     <div class="nav-item">
-      <button type="button" class="nav-parent">Onze club <span class="caret" aria-hidden="true">▾</span></button>
+      <button type="button" class="nav-parent">Over ons <span class="caret" aria-hidden="true">▾</span></button>
       <div class="sub-menu">
         <a href="over-ons.html">Clubvoorstelling</a>
         <a href="bestuur.html">Bestuur</a>
         <a href="nieuws.html">Nieuws</a>
       </div>
     </div>
-    <a href="activiteiten.html">Kalender</a>
-    <a href="archief.html">Archief</a>
+    <div class="nav-item" data-auth="in">
+      <button type="button" class="nav-parent">Clubinfo <span class="caret" aria-hidden="true">▾</span></button>
+      <div class="sub-menu">
+        <a href="clubdocumenten.html">Clubdocumenten</a>
+        <a href="jaarverslagen.html">Financiële jaarverslagen</a>
+        <a href="ledenlijsten.html">Ledenlijsten</a>
+      </div>
+    </div>
+    <a href="activiteiten.html">Activiteiten</a>
     <a href="word-lid.html" class="mobile-only" data-auth="out">Lid worden</a>
     <a href="leden.html" class="mobile-only" data-auth="out" data-auth-action="login">Inloggen</a>
     <a href="leden.html" class="mobile-only" data-auth="in">Mijn gegevens</a>
@@ -72,11 +79,11 @@
     <div class="breadcrumb">
       <a href="index.html">Home</a>
       <span aria-hidden="true">/</span>
-      <a href="over-ons.html">Onze club</a>
+      <a href="over-ons.html">Over ons</a>
       <span aria-hidden="true">/</span>
       <span class="current">Bestuur</span>
     </div>
-    <span class="kicker">Onze club</span>
+    <span class="kicker">Over ons</span>
     <h1>Het bestuur</h1>
     <p class="lede">Club O-3 wordt geleid door vrijwilligers uit de eigen ledenkring. Zij stellen het jaarprogramma samen, regelen de praktische kant van elke uitstap en vertegenwoordigen de club binnen Koperen Passer.</p>
   </div>
@@ -179,10 +186,9 @@
     <div class="footer-links">
       <div>
         <span class="footer-head">Ontdekken</span>
-        <a href="activiteiten.html">Kalender</a>
+        <a href="activiteiten.html">Activiteiten</a>
         <a href="nieuws.html">Nieuws</a>
-        <a href="archief.html">Archief</a>
-        <a href="over-ons.html">Onze club</a>
+        <a href="over-ons.html">Over ons</a>
       </div>
       <div>
         <span class="footer-head">Koperen Passer</span>
