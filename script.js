@@ -278,54 +278,7 @@
 })();
 
 
-// ---------- eigen foto opladen (hero + terugblikken) ----------
-(function () {
-  var imgs = document.querySelectorAll('img[data-upload]');
-  if (!imgs.length) return;
-  Array.prototype.forEach.call(imgs, function (img) {
-    var slot = img.getAttribute('data-upload');
-    var key = 'kp-foto-' + slot;
-    try {
-      var stored = localStorage.getItem(key);
-      if (stored) img.src = stored;
-    } catch (e) {}
-    var host = img.parentElement;
-    host.classList.add('foto-slot-host');
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'foto-browse';
-    btn.textContent = 'Eigen foto kiezen';
-    btn.setAttribute('aria-label', 'Eigen foto kiezen voor: ' + (img.alt || slot));
-    var input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'image/*';
-    input.className = 'foto-input';
-    btn.addEventListener('click', function () { input.click(); });
-    input.addEventListener('change', function () {
-      var file = input.files && input.files[0];
-      if (!file) return;
-      var reader = new FileReader();
-      reader.onload = function () {
-        var tmp = new Image();
-        tmp.onload = function () {
-          var max = 1600;
-          var s = Math.min(1, max / Math.max(tmp.width, tmp.height));
-          var c = document.createElement('canvas');
-          c.width = Math.round(tmp.width * s);
-          c.height = Math.round(tmp.height * s);
-          c.getContext('2d').drawImage(tmp, 0, 0, c.width, c.height);
-          var url = c.toDataURL('image/jpeg', 0.85);
-          document.querySelectorAll('img[data-upload="' + slot + '"]').forEach(function (el) { el.src = url; });
-          try { localStorage.setItem(key, url); } catch (e) {}
-        };
-        tmp.src = reader.result;
-      };
-      reader.readAsDataURL(file);
-    });
-    host.appendChild(btn);
-    host.appendChild(input);
-  });
-})();
+
 
 
 // ---------- contactformulier ----------

@@ -936,6 +936,10 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
   .site-header--sticky { z-index: 30; }
   .nav-overlay { z-index: 25; }
   .main-nav .mobile-only { display: flex; }
+  body.is-ingelogd .main-nav .mobile-only[data-auth="out"],
+  body:not(.is-ingelogd) .main-nav .mobile-only[data-auth="in"] { display: none; }
+  body:not(.is-ingelogd) .main-nav .nav-item[data-auth="in"],
+  body.is-ingelogd .main-nav .nav-item[data-auth="out"] { display: none; }
 }
 
 
@@ -1006,7 +1010,15 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 /* ---------- in-/uitlogstatus (mockup) ---------- */
 [data-auth] { display: none; }
 body.is-ingelogd [data-auth="in"], body:not(.is-ingelogd) [data-auth="out"] { display: initial; }
-body.is-ingelogd section[data-auth="in"] { display: block; }
+body.is-ingelogd section[data-auth="in"],
+body:not(.is-ingelogd) section[data-auth="out"],
+body.is-ingelogd div[data-auth="in"],
+body:not(.is-ingelogd) div[data-auth="out"],
+body.is-ingelogd aside[data-auth="in"],
+body:not(.is-ingelogd) aside[data-auth="out"] { display: block; }
+body.is-ingelogd a.btn[data-auth="in"],
+body:not(.is-ingelogd) a.btn[data-auth="out"] { display: inline-flex; }
+body:not(.is-ingelogd) aside.infobox[data-auth="out"] { display: flex; }
 @media (max-width: 820px) {
   body.is-ingelogd .main-nav [data-auth="in"],
   body:not(.is-ingelogd) .main-nav [data-auth="out"] { display: flex; }
@@ -1169,3 +1181,7 @@ body.is-ingelogd .main-nav .nav-item[data-auth="in"] { display: inline-flex; }
 /* ruimte tussen inschrijfformulier/galerij en de terugknop */
 .detail-back { margin-top: 44px; }
 @media (max-width: 820px) { .detail-back { margin-top: 32px; } }
+
+
+/* hamburger op volwaardige aanraakmaat */
+.menu-toggle { width: 44px; height: 44px; }

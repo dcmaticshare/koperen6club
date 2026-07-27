@@ -9,27 +9,69 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..700&family=Archivo:wght@400..750&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="style.css?v=17">
+<link rel="stylesheet" href="style.css?v=21">
 </head>
 <body>
 
-<!-- header (ingelogd) -->
-<header class="site-header">
-  <div class="container header-row header-row--leden">
+<!-- topbalk -->
+<div class="topbar">
+  <div class="container topbar-row">
+    <a href="word-lid.html" class="topbar-strong" data-auth="out">Lid worden</a>
+    <a href="leden.html" class="topbar-strong" data-auth="out" data-auth-action="login">Inloggen</a>
+    <a href="leden.html" class="topbar-strong" data-auth="in">Mijn gegevens</a>
+    <a href="index.html" class="topbar-strong" data-auth="in" data-auth-action="logout">Uitloggen</a>
+  </div>
+</div>
+
+<!-- header -->
+<header class="site-header site-header--sticky">
+  <div class="container header-row">
   <a class="brand" href="index.html">
     <img src="img/logo-artevelde.png" alt="Koperen Passer" class="brand-logo">
     <span class="brand-text">
       <span class="brand-name">KP-Artevelde</span>
-      <span class="brand-motto">Ledenomgeving</span>
+      <span class="brand-motto">Club O-3 · Koperen Passer · Gent</span>
     </span>
   </a>
-  <div class="leden-actions">
-    <a href="index.html" class="leden-link">Naar de website</a>
-    <a href="#profiel" class="leden-link leden-link--strong">Mijn profiel</a>
-    <a href="index.html" class="btn btn-outline btn-leden" data-auth-action="logout">Uitloggen</a>
+  <nav class="main-nav" id="mainNav" aria-label="Hoofdnavigatie">
+    <div class="nav-head">
+      <span class="nav-head-brand"><img src="img/logo-artevelde.png" alt="">KP-Artevelde</span>
+      <button class="nav-close" id="navClose" aria-label="Sluit menu">×</button>
+    </div>
+    <a href="index.html">Home</a>
+    <div class="nav-item">
+      <button type="button" class="nav-parent">Over ons <span class="caret" aria-hidden="true">▾</span></button>
+      <div class="sub-menu">
+        <a href="over-ons.html">Clubvoorstelling</a>
+        <a href="bestuur.html">Bestuur</a>
+        <a href="nieuws.html">Nieuws</a>
+      </div>
+    </div>
+    <div class="nav-item" data-auth="in">
+      <button type="button" class="nav-parent">Clubinfo <span class="caret" aria-hidden="true">▾</span></button>
+      <div class="sub-menu">
+        <a href="clubdocumenten.html">Clubdocumenten</a>
+        <a href="jaarverslagen.html">Financiële jaarverslagen</a>
+        <a href="ledenlijsten.html">Ledenlijsten</a>
+      </div>
+    </div>
+    <a href="activiteiten.html">Activiteiten</a>
+    <a href="word-lid.html" class="mobile-only" data-auth="out">Lid worden</a>
+    <a href="leden.html" class="mobile-only" data-auth="out" data-auth-action="login">Inloggen</a>
+    <a href="leden.html" class="mobile-only" data-auth="in">Mijn gegevens</a>
+    <a href="index.html" class="mobile-only" data-auth="in" data-auth-action="logout">Uitloggen</a>
+    <a href="contact.html" class="nav-cta-mobile">Contact</a>
+    <div class="nav-foot">Plus Oultra</div>
+  </nav>
+  <div class="header-actions">
+    <a href="contact.html" class="btn btn-outline btn-leden">Contact</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   </div>
 </header>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <!-- welkom + zoeken -->
 <section class="leden-welcome">
